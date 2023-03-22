@@ -1,0 +1,46 @@
+#terminal
+cmd - return: /Applications/iTerm.app/Contents/MacOS/iTerm2
+
+#browser
+cmd - B: /Applications/Safari.app/Contents/MacOS/Safari
+
+#
+#yabai
+#
+
+#focus
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+alt - k : yabai -m window --focus north
+alt - j : yabai -m window --focus south
+
+#move
+shift + alt - h : yabai -m window --warp west
+shift + alt - l : yabai -m window --warp east
+shift + alt - k : yabai -m window --warp north
+shift + alt - j : yabai -m window --warp south
+
+#create desktop, move window and follow focus
+
+shift + cmd - n : yabai -m space --create && \
+                   index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
+                   yabai -m window --space "${index}" && \
+                   yabai -m space --focus "${index}"
+
+#create desktop
+cmd - n : yabai -m space --create
+
+#focus desktop
+cmd + alt -1 : yabai -m space --focus 1
+cmd + alt -2 : yabai -m space --focus 2 
+cmd + alt -3 : yabai -m space --focus 3 
+cmd + alt -4 : yabai -m space --focus 4 
+cmd + alt -5 : yabai -m space --focus 5 
+
+
+#send window to desktop
+shift + cmd -1 : yabai -m window --space --focus 1
+shift + cmd -2 : yabai -m window --space --focus 2 
+shift + cmd -3 : yabai -m window --space --focus 3 
+shift + cmd -4 : yabai -m window --space --focus 4 
+shift + cmd -5 : yabai -m window --space --focus 5 

@@ -2,7 +2,7 @@
 cmd - return: /Applications/iTerm.app/Contents/MacOS/iTerm2
 
 #browser
-cmd - B: /Applications/Safari.app/Contents/MacOS/Safari
+cmd - b: /Applications/Arc.app/Contents/MacOS/Arc
 
 #
 #yabai
@@ -39,8 +39,8 @@ cmd + alt -5 : yabai -m space --focus 5
 
 
 #send window to desktop
-shift + cmd -1 : yabai -m window --space --focus 1
-shift + cmd -2 : yabai -m window --space --focus 2 
-shift + cmd -3 : yabai -m window --space --focus 3 
-shift + cmd -4 : yabai -m window --space --focus 4 
-shift + cmd -5 : yabai -m window --space --focus 5 
+shift + alt -1 : yabai -m window --space --focus 1
+shift + alt -2 : yabai -m window --space --focus 2 
+shift + alt -3 : yabai -m window --space --focus 3 
+shift + alt -4 : yabai -m window --space --focus 4 
+shift + alt -5 : yabai -m window --space --focus 5 

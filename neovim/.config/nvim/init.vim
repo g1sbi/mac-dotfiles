@@ -28,7 +28,7 @@ if (has("termguicolors"))
 endif
 
 syntax on
-colorscheme tokyonight
+colorscheme tokyonight-night
 let g:airline_theme='hybrid'
 
 set mouse=a
